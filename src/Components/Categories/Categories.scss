@@ -1,5 +1,7 @@
 @import "../../Utils/SharedStyles.scss";
 
 .categories__container {
+  display: grid;
+  margin-top: 2rem;
   background-color: #cbc0d3;
 }

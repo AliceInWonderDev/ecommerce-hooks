@@ -3,19 +3,20 @@
 .header__container {
   background-color: $color-primary-silver-pink;
   display: grid;
-  grid-template-columns: 10% 2fr 10%;
+  grid-template-columns: 1fr 3fr 0.5fr;
   justify-content: center;
   align-items: center;
-  width: 100%;
   margin: 0 auto;
+  width: 100%;
   margin-bottom: 2rem;
   @include desktop {
-    width: 100%;
+    width: unset;
+    padding: 0 165px;
   }
 }
 
 .header__main-container {
-  background-color: $color-primary-silver-pink;
+  width: 100%;
 }
 
 .header__brand-logo {
@@ -23,13 +24,45 @@
   height: 100%;
 }
 
+.header__logo {
+  width: 100%;
+  height: 100%;
+}
+
 .header__container-ul {
   list-style-type: none;
   display: grid;
-  grid-template-columns: 25% 35% 20%;
+  grid-template-columns: 33% 33% 33%;
+  justify-content: center;
 }
 
 .header__option-text {
   color: #ffffff;
   font: normal normal 600 1rem/1rem Montserrat;
+  grid-template-columns: 50% 50%;
+  text-decoration: unset;
 }
+
+.svg-inline--fa.fa-w-14 {
+  width: 35%;
+  height: 35%;
+  @include desktop {
+    width: 40%;
+  }
+}
+
+// .svg-inline--fa.fa-house-user {
+//   width: 35%;
+//   height: 35%;
+//   @include desktop {
+//     width: 40%;
+//   }
+// }
+
+// .svg-inline--fa.fa-w-16 {
+//   width: 35%;
+//   height: 35%;
+//   @include desktop {
+//     width: 20%;
+//   }
+// }

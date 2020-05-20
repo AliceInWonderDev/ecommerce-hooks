@@ -8,7 +8,6 @@ function App() {
   return (
     <Layout>
       <BestSeller />
-      <h1 className="app-name">Market</h1>
       <Categories />
     </Layout>
   );

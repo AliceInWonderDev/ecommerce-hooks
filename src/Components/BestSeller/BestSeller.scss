@@ -1,9 +1,26 @@
 @import "../../Utils/SharedStyles.scss";
 
 .best-seller__container {
-  background-color: #f5cb5c;
-  width: 40%;
-  height: 40%;
+  display: grid;
+  background-color: #6d6875;
+  border-radius: 0.5rem;
+  grid-template-rows: 50% 50%;
+  margin-bottom: 3rem;
+  height: 370px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include tablet {
+    width: 90%;
+    grid-template-columns: 58% 42%;
+    grid-template-rows: unset;
+  }
+}
+
+.best-seller__main-container {
+  background-color: #cca24a; //#f5cb5c;
+  width: 100%;
+  border-radius: 0.5rem;
 }
 
 .best-seller__size {
@@ -11,4 +28,27 @@
   height: 100%;
   border-radius: 50%;
   box-sizing: content-box;
+}
+
+.best-seller__text-container {
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.best-seller__title {
+  color: #f6bd60;
+  text-align: center;
+}
+
+.best-seller__text-decoration {
+  color: #faf3dd;
+  text-align: justify;
+  font: $h4-xs-semi;
+}
+
+.header__option-input {
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
 }
