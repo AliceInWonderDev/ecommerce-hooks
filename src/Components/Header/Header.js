@@ -6,6 +6,7 @@ import {
   faSearch,
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import "./Header.scss";
 import CapricornImg from "../../Utils/capricorn.jpg";
 
@@ -13,50 +14,53 @@ function Header() {
   return (
     <div className="header__main-container">
       <div className="header__container">
-        <div className="header__brand-logo">
-          <img src={CapricornImg} alt="logo" className="header__logo" />
-        </div>
+        <Link to="/">
+          <div className="header__brand-logo">
+            <img src={CapricornImg} alt="logo" className="header__logo" />
+          </div>
+        </Link>
 
         <ul className="header__container-ul">
           <li>
-            <a href="/home" className="header__option-text">
+            <Link to="/" className="header__option-text">
               <FontAwesomeIcon
                 icon={faHouseUser}
                 className="header__icon"
                 size="lg"
               />
-              <p>Home</p>
-            </a>
+              Home
+            </Link>
           </li>
           <li>
-            <a href="/Search" className="header__option-text">
+            <Link to="/search" className="header__option-text">
               <FontAwesomeIcon
                 icon={faSearch}
                 className="header__icon"
                 size="lg"
               />
-              <p>Search</p>
-            </a>
+              Search
+            </Link>
           </li>
           <li>
-            <a href="/Favorites" className="header__option-text">
+            <Link to="/account" className="header__option-text">
               <FontAwesomeIcon
                 icon={faHeart}
                 className="header__icon"
                 size="lg"
               />
-              <p>Favorites</p>
-            </a>
+              Account
+            </Link>
           </li>
         </ul>
         <div>
-          <div>
+          <Link to="/pay" className="header__option-text">
             <FontAwesomeIcon
               icon={faShoppingBag}
               className="header__icon"
               size="lg"
             />
-          </div>
+            Bag
+          </Link>
         </div>
       </div>
     </div>

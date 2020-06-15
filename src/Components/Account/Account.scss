@@ -1,0 +1,48 @@
+@import "../../Utils/SharedStyles.scss";
+
+.account__container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: auto 0;
+}
+
+ul > li {
+  list-style-type: none;
+}
+
+.account__profile {
+  display: grid;
+  grid-template-rows: 10% 20% 20% 10%;
+}
+
+.account__login {
+  display: grid;
+  grid-template-rows: 10% 20% 20% 20% 20% 10%;
+}
+
+.account__input-container {
+  margin: auto 0;
+}
+
+.account__input {
+  border: 2px solid black;
+  padding: 1rem;
+  margin: 0 1rem 1rem 0;
+  width: 90%;
+}
+
+.account__variable-texts {
+  margin-bottom: 1rem;
+}
+
+.default-btn {
+  padding: 1rem;
+  background-color: cadetblue;
+  width: 50%;
+  margin: auto 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border-color: transparent;
+  
+}

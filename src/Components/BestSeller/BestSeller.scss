@@ -11,7 +11,7 @@
   margin: 0 auto;
 
   @include tablet {
-    width: 90%;
+    width: 80%;
     grid-template-columns: 58% 42%;
     grid-template-rows: unset;
   }
@@ -44,7 +44,7 @@
 .best-seller__text-decoration {
   color: #faf3dd;
   text-align: justify;
-  font: $h4-xs-semi;
+  font: $h4-bold;
 }
 
 .header__option-input {

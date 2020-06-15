@@ -14,9 +14,9 @@ function BestSeller() {
     <div className="best-seller__container">
       <div className="best-seller__main-container">
         <Slider onSlideChange={onSlideChange} hasBullets>
-          <img src={SofaImg} alt="sofa" className="best-seller__size" />
           <img src={SofaImg3} alt="sofa" className="best-seller__size" />
           <img src={SofaImg4} alt="sofa" className="best-seller__size" />
+          <img src={SofaImg} alt="sofa" className="best-seller__size" />
           <img src={SofaImg2} alt="sofa" className="best-seller__size" />
         </Slider>
       </div>

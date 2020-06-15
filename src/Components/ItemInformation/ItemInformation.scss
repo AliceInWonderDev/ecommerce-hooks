@@ -1,5 +1,34 @@
 @import "../../Utils/SharedStyles.scss";
 
 .item-information__container {
-  background-color: #eee4e1;
+  margin: 0 auto;
+  width: 80%;
+  height: 80%;
+  box-sizing: content-box;
+  position: relative;
+}
+
+.item-information__size {
+  width: 100%;
+  height: 100%;
+}
+
+.item-information__img {
+  width: 100%;
+  height: 100%;
+  border: 5px solid #1d2d44;
+}
+
+.item-information__inner-box {
+  background-color: #735d78;
+  border: 5px solid #1d2d44;
+  position: absolute;
+  width: 55%;
+  height: 10%;
+  top: 80px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  color: #ffcf99;
+  font: $h1;
 }
