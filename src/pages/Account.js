@@ -15,11 +15,11 @@ function Account() {
     <Router>
       <Switch>
         <Route path="/account">
+          <span className="account__variable-texts">
+            Go to your account or create one
+          </span>
+          <hr />
           <div className="account__container">
-            <span className="account__variable-texts">
-              Go to your account or create one
-            </span>
-            <hr />
             <div className="account__profile">
               Log in to your profile
               <div className="account__input-container">
@@ -44,10 +44,13 @@ function Account() {
             <div className="account__login">
               <span className="account__variable-texts">Sing up</span>
               <div className="account__input-container">
-                <input className="account__input" placeholder="Name" />
+                <input
+                  className="account__input"
+                  placeholder="Name and Lastname"
+                />
               </div>
               <div className="account__input-container">
-                <input className="account__input" placeholder="Lastname" />
+                <input className="account__input" placeholder="Email" />
               </div>
               <div className="account__input-container">
                 <input
