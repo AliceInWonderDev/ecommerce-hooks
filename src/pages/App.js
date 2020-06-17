@@ -8,6 +8,8 @@ import Home from "../Components/Home";
 // var firebaseui = require("firebaseui");
 
 function App() {
+
+  
   return (
     <Router>
       <Layout>

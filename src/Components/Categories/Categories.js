@@ -1,18 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Categories.scss";
 import ItemInformation from "../ItemInformation/ItemInformation";
-import WoodImg from "../../Utils/wood.jpg";
-import PlasticImg from "../../Utils/plastic.jpg";
-import MetalImg from "../../Utils/metal.jpg";
-import MimbreImg from "../../Utils/mimbre.jpg";
 
 function Categories() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("http://localhost:3020/hello")
+      .then((resp) => resp.json())
+      .then((json) => {
+        console.log("JSON fetch", json);
+        setData(json);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <div>loading</div>;
+  }
+
   return (
     <div className="categories__container">
-      <ItemInformation image={WoodImg} text={"Wood"} />
-      <ItemInformation image={PlasticImg} text={"Plastic"} />
-      <ItemInformation image={MetalImg} text={"Metal"} />
-      <ItemInformation image={MimbreImg} text={"Mimbre"} />
+      {data.map((item, index) => {
+        return (
+          <ItemInformation
+            key={index}
+            img={item.img}
+            category={item.category}
+          />
+        );
+      })}
     </div>
   );
 }

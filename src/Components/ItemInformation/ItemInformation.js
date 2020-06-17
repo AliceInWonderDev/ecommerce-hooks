@@ -7,12 +7,12 @@ function ItemInformation(props) {
       <div className="item-information__container">
         <div className="item-information__img">
           <img
-            src={props.image}
+            src={props.img}
             alt="categories"
             className="item-information__size"
           />
         </div>
-        <div className="item-information__inner-box">{props.text}</div>
+        <div className="item-information__inner-box">{props.category}</div>
       </div>
     </React.Fragment>
   );
