@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import "./Categories.scss";
+import { useParams } from "react-router-dom";
 import ItemInformation from "../ItemInformation/ItemInformation";
 
-function Categories() {
-  const [data, setData] = useState([]);
+function CategoriesChildren() {
+  const [childData, setChildData] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const { id } = useParams();
+
   useEffect(() => {
-    fetch("http://localhost:3020/categories")
+    fetch(`http://localhost:3020/categories/${id}`)
       .then((resp) => resp.json())
       .then((json) => {
         console.log("JSON fetch", json);
-        setData(json);
+        setChildData(json);
         setLoading(false);
       });
-  }, []);
+  }, [id]);
 
   if (loading) {
     return <div>loading</div>;
@@ -23,19 +24,13 @@ function Categories() {
 
   return (
     <div className="categories__container">
-      {data.map((item, index) => {
+      {childData.map((item, index) => {
         return (
-          <Link to={`/products/${item.id}`}>
-            <ItemInformation
-              key={index}
-              img={item.img}
-              category={item.category}
-            />
-          </Link>
+          <ItemInformation key={index} img={item.img} category={item.name} />
         );
       })}
     </div>
   );
 }
 
-export default Categories;
+export default CategoriesChildren;
