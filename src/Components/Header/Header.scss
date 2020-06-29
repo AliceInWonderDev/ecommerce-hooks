@@ -38,19 +38,23 @@
 
 .header__option-text {
   color: #ffffff;
-  font: normal normal 600 1rem/1rem Montserrat;
+  font: $link1;
   grid-template-columns: 50% 50%;
   text-decoration: unset;
 }
 
 .svg-inline--fa.fa-w-14 {
-  width: 35%;
-  height: 35%;
+  // width: 35%;
+  // height: 35%;
   @include desktop {
     width: 40%;
   }
 }
 
+.svg-inline--fa .header__icon {
+  width: 100%;
+  height: 100%;
+}
 // .svg-inline--fa.fa-house-user {
 //   width: 35%;
 //   height: 35%;

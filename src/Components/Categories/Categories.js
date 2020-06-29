@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { spinner } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import "./Categories.scss";
 import ItemInformation from "../ItemInformation/ItemInformation";
@@ -18,7 +20,12 @@ function Categories() {
   }, []);
 
   if (loading) {
-    return <div>loading</div>;
+    return (
+      <div>
+        {/* <FontAwesomeIcon icon={spinner} rotation={90} /> */}
+        loading
+      </div>
+    );
   }
 
   return (

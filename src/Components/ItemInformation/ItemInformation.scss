@@ -20,6 +20,9 @@
 }
 
 .item-information__inner-box {
+  justify-content: center;
+  align-content: center;
+  display: grid;
   background-color: #735d78;
   border: 5px solid #1d2d44;
   position: absolute;
@@ -30,5 +33,5 @@
   left: 0;
   margin: 0 auto;
   color: #ffcf99;
-  font: $h1;
+  font: $subtitle1;
 }
